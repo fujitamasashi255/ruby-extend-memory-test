@@ -27,3 +27,8 @@ bin/rails memory_profile:find_each:with_extend
 ```
 bin/rails memory_profile:find_each:without_extend
 ```
+
+[20240821_Shibuya.rb.pptx](https://github.com/user-attachments/files/16690075/20240821_Shibuya.rb.pptx)
+
+
+
