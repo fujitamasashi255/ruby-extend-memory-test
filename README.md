@@ -1,24 +1,29 @@
 # README
+### セットアップ
+docker環境セットアップ・DBの作成後、 `bin/rails db:seed` で10万件のUserレコードが生成されます。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### rss計測
+結果はlog/measure_rss に出力されます。
 
-Things you may want to cover:
+* extend ありで計測：
+```
+bin/rails measure_rss:with_extend
+```
 
-* Ruby version
+* extend なしで計測：
+```
+bin/rails measure_rss:without_extend
+```
 
-* System dependencies
+### heap-profiler で計測
+結果はlog/memory_profile/find_each/with_extend_2024xxx/result.txt に出力されます。
 
-* Configuration
+* extend ありで計測：
+```
+bin/rails memory_profile:find_each:with_extend
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* extend なしで計測：
+```
+bin/rails memory_profile:find_each:without_extend
+```
